@@ -9,6 +9,7 @@ export function SignupAuth() {
     <Section>
       <div>
         <Paragraph text="Nova Conta" />
+
         <Label text="Nome" forLabel="nome" />
         <Input typeInput="text" idInput="nome" nameInput="nome" />
 
