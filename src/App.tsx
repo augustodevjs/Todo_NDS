@@ -1,24 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import { Authentication } from './pages/Login/Authentication';
-import { Lists } from './pages/Dashboard/Lists';
-import { Tasks } from './pages/Dashboard/Tasks';
-
+import { Router } from './routes/Router';
 import { GlobalStyle } from './styles/global';
-import { Register } from './pages/Login/Register';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function App() {
   return (
     <>
       <GlobalStyle />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Tasks />} />
-          <Route path="lists" element={<Lists />} />
-          <Route path="login" element={<Authentication />} />
-          <Route path="register" element={<Register />} />
-        </Routes>
-      </BrowserRouter>
+      <Router />
     </>
   );
 }

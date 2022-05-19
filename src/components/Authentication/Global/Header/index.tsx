@@ -1,6 +1,6 @@
 import { HeaderTodo } from './styles';
-import Brand from '../../../assets/Brand.svg';
 import { Link } from 'react-router-dom';
+import Brand from '../../../../assets/Brand.svg';
 
 type HeaderProps = {
   text: string;
@@ -11,7 +11,7 @@ export function Header({ text }: HeaderProps) {
     <HeaderTodo>
       <div>
         <img src={Brand} alt="logo" />
-        <Link to={text === 'Não possui uma conta?' ? '/register' : '/login'}>
+        <Link to={text === 'Não possui uma conta?' ? '/signup' : '/login'}>
           {text}
         </Link>
       </div>
