@@ -1,9 +1,5 @@
-import { Section } from './styles';
+import { Header } from '../../../components/authentication_todo/Header';
 
 export function Authentication() {
-  return (
-    <Section>
-      <h1>asdas</h1>
-    </Section>
-  );
+  return <Header text="Não possui uma conta?" />;
 }

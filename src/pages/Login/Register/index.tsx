@@ -1,9 +1,5 @@
-import { Section } from './styles';
+import { Header } from '../../../components/authentication_todo/Header';
 
 export function Register() {
-  return (
-    <Section>
-      <h1></h1>
-    </Section>
-  );
+  return <Header text="Já possui uma conta?" />;
 }
