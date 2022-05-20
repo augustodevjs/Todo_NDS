@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ParagraphForm = styled.h1`
+export const H1 = styled.h1`
   font-family: 'Poppins', sans-serif;
   color: #e9ecef;
   font-weight: 500;

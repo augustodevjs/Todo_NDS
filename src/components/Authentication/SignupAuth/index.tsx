@@ -1,23 +1,19 @@
 import { Button } from '../Components/Button';
 import { Input } from '../../Input';
-import { Paragraph } from '../Components/Paragraph';
+import { TagHeader } from '../Components/Tags/TagHeader';
 import { Label } from '../Components/Label';
 
-import { Link } from 'react-router-dom';
-
-import Brand from '../../../assets/Brand.svg';
-
 import { Section } from './styles';
+import { ImgSvg } from '../Components/ImgSvg';
+import { TagParagraph } from '../Components/Tags/TagParagraph';
 
 export function SignupAuth() {
   return (
     <Section>
       <div>
-        <Link to="/login">
-          <img src={Brand} alt="logo" />
-        </Link>
+        <ImgSvg />
 
-        <Paragraph text="Nova Conta" />
+        <TagHeader text="Nova Conta" />
 
         <Label text="Nome" forLabel="nome" />
         <Input
@@ -52,6 +48,8 @@ export function SignupAuth() {
         />
 
         <Button text="Cadastrar-se" />
+
+        <TagParagraph text="Já possui uma conta?" />
       </div>
     </Section>
   );

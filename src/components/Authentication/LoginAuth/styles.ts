@@ -6,8 +6,9 @@ export const Section = styled.section`
   align-items: center;
   justify-content: center;
   height: calc(100vh - 80px);
-  img {
-    margin-bottom: 3rem;
+
+  a {
+    display: none;
   }
 
   input {
@@ -21,6 +22,7 @@ export const Section = styled.section`
   div + label {
     margin-top: 0.75rem;
   }
+
   button {
     width: 100%;
     border: none;
@@ -36,5 +38,11 @@ export const Section = styled.section`
 
   @media (max-width: 650px) {
     height: 100vh;
+    a {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3.5rem;
+      align-self: center;
+    }
   }
 `;

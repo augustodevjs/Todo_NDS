@@ -1,23 +1,20 @@
 import { Button } from '../Components/Button';
 import { Input } from '../../Input';
-import { Paragraph } from '../Components/Paragraph';
+import { TagHeader } from '../Components/Tags/TagHeader';
 import { Label } from '../Components/Label';
 
-import { Link } from 'react-router-dom';
-
-import Brand from '../../../assets/Brand.svg';
-
 import { Section } from './styles';
+import { ImgSvg } from '../Components/ImgSvg';
+import { TagParagraph } from '../Components/Tags/TagParagraph';
 
 export function LoginAuth() {
   return (
     <Section>
       <div>
-        <Link to="/login">
-          <img src={Brand} alt="logo" />
-        </Link>
+        <ImgSvg />
 
-        <Paragraph text="Autenticação" />
+        <TagHeader text="Autenticação" />
+
         <Label text="Email" forLabel="email" />
         <Input
           typeInput="email"
@@ -25,6 +22,7 @@ export function LoginAuth() {
           nameInput="email"
           placeholderInput="Digite seu melhor email"
         />
+
         <Label text="Senha" forLabel="password" />
         <Input
           typeInput="password"
@@ -32,7 +30,10 @@ export function LoginAuth() {
           nameInput="password"
           placeholderInput="Digite sua senha"
         />
+
         <Button text="Entrar" />
+
+        <TagParagraph text="Não possui uma conta?" />
       </div>
     </Section>
   );

@@ -6,6 +6,11 @@ export const Section = styled.section`
   align-items: center;
   justify-content: center;
   height: calc(100vh - 80px);
+
+  a {
+    display: none;
+  }
+
   input {
     width: 320px;
     &:focus {
@@ -32,5 +37,11 @@ export const Section = styled.section`
 
   @media (max-width: 650px) {
     height: 100vh;
+    a {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3.5rem;
+      align-self: center;
+    }
   }
 `;
