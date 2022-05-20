@@ -14,9 +14,13 @@ export const HeaderTodo = styled.header`
       font-weight: 500;
       color: #27c498;
       text-decoration: none;
+      transition: 0.1s ease;
       &:hover {
         filter: brightness(1.2);
       }
     }
+  }
+  @media (max-width: 650px) {
+    display: none;
   }
 `;

@@ -1,13 +1,22 @@
-import { Button } from '../Global/Button';
-import { Input } from '../Global/Input';
-import { Label } from '../Global/Label';
-import { Paragraph } from '../Global/Paragraph';
+import { Button } from '../Components/Button';
+import { Input } from '../../Input';
+import { Paragraph } from '../Components/Paragraph';
+import { Label } from '../Components/Label';
+
+import { Link } from 'react-router-dom';
+
+import Brand from '../../../assets/Brand.svg';
+
 import { Section } from './styles';
 
 export function LoginAuth() {
   return (
     <Section>
       <div>
+        <Link to="/login">
+          <img src={Brand} alt="logo" />
+        </Link>
+
         <Paragraph text="Autenticação" />
         <Label text="Email" forLabel="email" />
         <Input

@@ -1,4 +1,4 @@
-import { Header } from '../../components/Authentication/Global/Header';
+import { Header } from '../../components/Authentication/Components/Header';
 import { SignupAuth } from '../../components/Authentication/SignupAuth';
 
 export function Signup() {

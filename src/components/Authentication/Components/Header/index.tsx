@@ -10,7 +10,9 @@ export function Header({ text }: HeaderProps) {
   return (
     <HeaderTodo>
       <div>
-        <img src={Brand} alt="logo" />
+        <Link to="/login">
+          <img src={Brand} alt="logo" />
+        </Link>
         <Link to={text === 'Não possui uma conta?' ? '/signup' : '/login'}>
           {text}
         </Link>
