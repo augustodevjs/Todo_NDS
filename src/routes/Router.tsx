@@ -10,6 +10,7 @@ export function Router() {
       <Routes>
         <Route path="/" element={<Tasks />} />
         <Route path="/lists" element={<Lists />} />
+
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>

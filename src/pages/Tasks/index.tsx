@@ -1,3 +1,5 @@
+import { TasksDashboard } from '../../components/Dashboard/TasksDashboard';
+
 export function Tasks() {
-  return <div></div>;
+  return <TasksDashboard />;
 }

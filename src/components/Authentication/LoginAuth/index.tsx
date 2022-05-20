@@ -1,5 +1,5 @@
 import { Button } from '../Components/Button';
-import { Input } from '../../Input';
+import { Input } from '../../Global/Input';
 import { TagHeader } from '../Components/Tags/TagHeader';
 import { Label } from '../Components/Label';
 

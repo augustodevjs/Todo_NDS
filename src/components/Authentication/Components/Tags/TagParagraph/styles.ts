@@ -8,8 +8,9 @@ export const Paragraph = styled.p`
   margin-top: 1.5rem;
   width: 100%;
   text-align: center;
-  p {
-    text-decoration: none;
-    color: red !important;
+  text-decoration: none;
+  transition: 0.3s ease;
+  &:hover {
+    filter: brightness(1.2);
   }
 `;

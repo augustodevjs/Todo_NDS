@@ -1,3 +1,5 @@
+import { ListsDashboard } from '../../components/Dashboard/ListsDashboard';
+
 export function Lists() {
-  return <div></div>;
+  return <ListsDashboard />;
 }

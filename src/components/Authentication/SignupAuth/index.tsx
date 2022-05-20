@@ -1,11 +1,11 @@
 import { Button } from '../Components/Button';
-import { Input } from '../../Input';
 import { TagHeader } from '../Components/Tags/TagHeader';
 import { Label } from '../Components/Label';
 
 import { Section } from './styles';
 import { ImgSvg } from '../Components/ImgSvg';
 import { TagParagraph } from '../Components/Tags/TagParagraph';
+import { Input } from '../../Global/Input';
 
 export function SignupAuth() {
   return (

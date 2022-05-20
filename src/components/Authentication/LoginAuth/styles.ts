@@ -9,6 +9,7 @@ export const Section = styled.section`
 
   a {
     display: none;
+    text-decoration: none;
   }
 
   input {
@@ -42,7 +43,11 @@ export const Section = styled.section`
       display: flex;
       justify-content: center;
       margin-bottom: 3.5rem;
-      align-self: center;
+    }
+  }
+  @media (max-width: 360px) {
+    input {
+      width: 240px;
     }
   }
 `;
