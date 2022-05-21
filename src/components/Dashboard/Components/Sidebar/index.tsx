@@ -1,29 +1,44 @@
 import { SidebarDashboard } from './styles';
 import BrandDashboard from '../../../../assets/BrandDashboard.svg';
-import { BiMenu, BiMenuAltRight } from 'react-icons/bi';
-import { MdInbox, MdFormatListBulleted } from 'react-icons/md';
+
+import { BiMenu } from 'react-icons/bi';
+import { FaRegUserCircle } from 'react-icons/fa';
+import { MdInbox, MdFormatListBulleted, MdLogout } from 'react-icons/md';
+
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export function Sidebar() {
+  const [currentLink, setCurrentLink] = useState(1);
+
   return (
     <SidebarDashboard>
-      <div>
+      <div className="logo">
         <Link to="/">
           <img src={BrandDashboard} alt="logo" />
         </Link>
-        <BiMenu />
+        <a href="#">
+          <BiMenu />
+        </a>
       </div>
+
       <nav>
         <ul>
-          <li>
+          <li
+            className={currentLink === 1 ? 'active' : 'none'}
+            onClick={() => setCurrentLink(1)}
+          >
             <Link to="/">
               <MdInbox />
               <span>Tarefas</span>
+              <p className="number">5</p>
             </Link>
-            <span></span>
           </li>
 
-          <li>
+          <li
+            className={currentLink === 2 ? 'active' : 'none'}
+            onClick={() => setCurrentLink(2)}
+          >
             <Link to="/lists">
               <MdFormatListBulleted />
               <span>Listas</span>
@@ -31,12 +46,19 @@ export function Sidebar() {
           </li>
 
           <li>
-            <div>
-              <span>
-                <h4>Gabriel Cleiton</h4>
-                <p>Usuário</p>
-              </span>
+            <div className="user">
+              <FaRegUserCircle />
+              <div className="user-info">
+                <span>Gabriel Cleiton</span>
+                <div>Usuário</div>
+              </div>
             </div>
+
+            <span>
+              <Link to="/login">
+                <MdLogout />
+              </Link>
+            </span>
           </li>
         </ul>
       </nav>
