@@ -33,6 +33,7 @@ export function Sidebar() {
               <span>Tarefas</span>
               <p className="number">5</p>
             </Link>
+            <h4>Tarefas</h4>
           </li>
 
           <li
@@ -43,9 +44,10 @@ export function Sidebar() {
               <MdFormatListBulleted />
               <span>Listas</span>
             </Link>
+            <h4>Listas</h4>
           </li>
 
-          <li>
+          <li className="user-profile">
             <div className="user">
               <FaRegUserCircle />
               <div className="user-info">

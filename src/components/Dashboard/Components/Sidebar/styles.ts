@@ -20,12 +20,17 @@ export const SidebarDashboard = styled.aside`
   nav {
     ul {
       padding: 0 1rem 1rem 1rem;
-      li {
+      .none {
         list-style-type: none;
         background-color: transparent;
-
-        padding: 0.875rem;
         border-radius: 0.625rem;
+        padding: 0.625rem;
+        position: relative;
+        div {
+          position: absolute;
+          top: 0;
+          left: 120px;
+        }
         a {
           text-decoration: none;
           color: #e9ecef;
@@ -52,17 +57,38 @@ export const SidebarDashboard = styled.aside`
         }
       }
       .active {
+        list-style-type: none;
         background: #fff;
-
-        a {
-          color: #202342;
+        border-radius: 0.625rem;
+        padding: 0.625rem;
+        div {
+          position: absolute;
+          top: 0;
+          left: 120px;
         }
-      }
-
-      .none {
-        .number {
-          background: #fff;
+        a {
+          text-decoration: none;
           color: #202342;
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
+          svg {
+            font-size: 1.5rem;
+          }
+          span {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            margin-right: 0.25rem;
+          }
+          .number {
+            font-size: 0.7rem;
+            margin-bottom: 0;
+            background-color: #202342;
+            padding: 0 0.3125rem;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 1px;
+            color: #fff;
+          }
         }
       }
     }
@@ -79,6 +105,7 @@ export const SidebarDashboard = styled.aside`
     display: flex;
     align-items: center;
     gap: 2.4375rem;
+    padding: 0.875rem;
     .user {
       display: flex;
       align-items: center;
@@ -105,6 +132,7 @@ export const SidebarDashboard = styled.aside`
       svg {
         transform: rotate(180deg);
         font-size: 1.5rem;
+        color: #fff;
       }
     }
   }
