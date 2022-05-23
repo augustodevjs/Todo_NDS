@@ -4,13 +4,13 @@ import { TagHeader } from '../Components/Tags/TagHeader';
 import { Label } from '../Components/Label';
 
 import { Section } from './styles';
-import { ImgSvg } from '../Components/ImgSvg';
 import { TagParagraph } from '../Components/Tags/TagParagraph';
+import { ImgSvg } from '../Components/ImgSvg';
 
 export function LoginAuth() {
   return (
     <Section>
-      <div>
+      <form action="#">
         <ImgSvg />
 
         <TagHeader text="Autenticação" />
@@ -34,7 +34,7 @@ export function LoginAuth() {
         <Button text="Entrar" />
 
         <TagParagraph text="Não possui uma conta?" />
-      </div>
+      </form>
     </Section>
   );
 }

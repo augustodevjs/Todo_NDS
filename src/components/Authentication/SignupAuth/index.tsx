@@ -10,7 +10,7 @@ import { Input } from '../../Global/Input';
 export function SignupAuth() {
   return (
     <Section>
-      <div>
+      <form action="#">
         <ImgSvg />
 
         <TagHeader text="Nova Conta" />
@@ -42,15 +42,15 @@ export function SignupAuth() {
         <Label text="Confirmação de Senha" forLabel="password" />
         <Input
           typeInput="password"
-          idInput="password"
-          nameInput="password"
+          idInput="confirmation"
+          nameInput="confirmation"
           placeholderInput="Ex: 123120312"
         />
 
         <Button text="Cadastrar-se" />
 
         <TagParagraph text="Já possui uma conta?" />
-      </div>
+      </form>
     </Section>
   );
 }
