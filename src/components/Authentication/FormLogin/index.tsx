@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom';
 
 import { Label } from '../Components/Label';
 import { ImgSvg } from '../Components/ImgSvg';
+import { FormControl } from 'react-bootstrap';
+import { Input } from './components';
 
 type CreateUserData = {
   email: string;
@@ -35,6 +37,7 @@ export function FormLogin() {
     formState: { errors },
   } = useForm<CreateUserData>({
     resolver: yupResolver(createUserFormSchema),
+    mode: 'onChange',
   });
 
   const onSubmit = (data: CreateUserData) => console.log(data);
@@ -48,7 +51,14 @@ export function FormLogin() {
 
         <h1>Autenticação</h1>
 
-        <Label forLabel="email">
+        <Input
+          name="email"
+          label="Email"
+          error={errors.email?.message}
+          register={register}
+        ></Input>
+
+        {/* <Label forLabel="email">
           Email
           <input
             {...register('email', { required: true })}
@@ -58,7 +68,7 @@ export function FormLogin() {
             id="email"
           />
           <span>{errors.email?.message}</span>
-        </Label>
+        </Label> */}
 
         <Label forLabel="password">
           Senha
