@@ -1,10 +1,11 @@
+import { ReactFragment, ReactPortal } from 'react';
 import { LabelForm } from './styles';
 
 type LabelProps = {
-  text: string;
+  children: ReactFragment | ReactPortal | boolean | null | undefined;
   forLabel: string;
 };
 
-export function Label({ text, forLabel }: LabelProps) {
-  return <LabelForm htmlFor={forLabel}>{text}</LabelForm>;
+export function Label({ children, forLabel }: LabelProps) {
+  return <LabelForm htmlFor={forLabel}>{children}</LabelForm>;
 }
