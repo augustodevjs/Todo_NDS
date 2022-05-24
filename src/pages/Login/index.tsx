@@ -1,11 +1,11 @@
 import { Header } from '../../components/Authentication/Components/Header';
-import { LoginAuth } from '../../components/Authentication/LoginAuth';
+import { FormLogin } from '../../components/Authentication/FormLogin';
 
 export function Login() {
   return (
     <>
       <Header text="Não possui uma conta?" />
-      <LoginAuth />
+      <FormLogin />
     </>
   );
 }

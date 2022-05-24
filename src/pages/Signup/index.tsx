@@ -1,11 +1,11 @@
 import { Header } from '../../components/Authentication/Components/Header';
-import { SignupAuth } from '../../components/Authentication/SignupAuth';
+import { FormSignup } from '../../components/Authentication/FormSignup';
 
 export function Signup() {
   return (
     <>
       <Header text="Já possui uma conta?" />
-      <SignupAuth />
+      <FormSignup />
     </>
   );
 }
