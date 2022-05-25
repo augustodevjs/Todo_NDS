@@ -1,4 +1,3 @@
-import { SidebarDashboard } from './styles';
 import BrandDashboard from '../../../../assets/BrandDashboard.svg';
 
 import { BiMenu } from 'react-icons/bi';
@@ -7,6 +6,7 @@ import { MdInbox, MdFormatListBulleted, MdLogout } from 'react-icons/md';
 
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { SidebarDashboard } from './style';
 
 export function Sidebar() {
   const [currentLink, setCurrentLink] = useState(1);

@@ -2,6 +2,12 @@
   "name": "todo-nds",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "autoprefixer": "10.4.5"
+  },
+  "resolutions": {
+    "autoprefixer": "10.4.5"
+  },
   "dependencies": {
     "@hookform/resolvers": "^2.8.10",
     "autoprefixer": "10.4.5",

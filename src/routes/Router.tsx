@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Lists } from '../pages/Lists';
-import { Login } from '../pages/Login';
-import { Signup } from '../pages/Signup';
-import { Tasks } from '../pages/Tasks';
+import { Login } from '../pages/authentication/Login';
+import { Signup } from '../pages/authentication/Signup';
+import { Lists } from '../pages/dashboard/Lists';
+import { Tasks } from '../pages/dashboard/Tasks';
 
 export function Router() {
   return (
