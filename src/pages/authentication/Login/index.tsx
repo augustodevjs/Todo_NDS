@@ -1,16 +1,13 @@
 import { Link } from 'react-router-dom';
-import { Button } from '../Components/Button';
-import { Header } from '../Components/Header';
-import { ImgSvg } from '../Components/ImgSvg';
-import { Label } from '../Components/Label';
-
-import { ContainerForm, Section } from './styles';
 
 import { useForm } from 'react-hook-form';
-
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+
+import { Button, Header, ImgSvg } from '../Components';
 import { Input } from '../../../components';
+
+import { ContainerForm, Section } from './styles';
 
 type CreateUserData = {
   email: string;
@@ -54,35 +51,22 @@ export function Login() {
           <h1>Autenticação</h1>
 
           <Input
+            type="email"
             name="email"
             label="Email"
+            placeholder="Digite o seu melhor email"
             error={errors.email?.message}
             register={register}
           />
 
-          {/* <Label forLabel="email">
-          Email
-          <input
-            {...register('email', { required: true })}
-            placeholder="Digite seu melhor email"
-            type="email"
-            name="email"
-            id="email"
+          <Input
+            type="password"
+            name="password"
+            label="Senha"
+            placeholder="Digite sua senha"
+            error={errors.password?.message}
+            register={register}
           />
-          <span>{errors.email?.message}</span>
-        </Label> */}
-
-          <Label forLabel="password">
-            Senha
-            <input
-              {...register('password')}
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Digite sua senha"
-            />
-            <span>{errors.password?.message}</span>
-          </Label>
 
           <Button text="Entrar" />
 

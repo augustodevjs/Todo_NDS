@@ -12,18 +12,6 @@ export const Section = styled.section`
     text-decoration: none;
   }
 
-  input {
-    width: 320px;
-    &:focus {
-      border: 1px solid #fff;
-      outline: none;
-    }
-  }
-
-  div + label {
-    margin-top: 0.75rem;
-  }
-
   @media (max-width: 650px) {
     height: 100vh;
     a {
@@ -42,10 +30,6 @@ export const Section = styled.section`
 `;
 
 export const FormContainer = styled.form`
-  label + label {
-    margin-top: 10px;
-  }
-
   h1 {
     font-family: 'Poppins', sans-serif;
     color: #e9ecef;

@@ -13,10 +13,6 @@ export const Section = styled.section`
 `;
 
 export const ContainerForm = styled.form`
-  label + label {
-    margin-top: 10px;
-  }
-
   h1 {
     font-family: 'Poppins', sans-serif;
     color: #e9ecef;

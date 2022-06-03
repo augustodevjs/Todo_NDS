@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom';
-import { FormContainer, Section } from './styles';
 
 import { useForm } from 'react-hook-form';
-
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { Header } from '../Components/Header';
-import { ImgSvg } from '../Components/ImgSvg';
-import { Label } from '../Components/Label';
-import { Button } from '../Components/Button';
+
+import { Header, ImgSvg, Button } from '../Components';
+
+import { FormContainer, Section } from './styles';
+import { Input } from '../../../components';
 
 type CreateUserData = {
   name: string;
@@ -57,49 +56,37 @@ export function Signup() {
 
           <h1>Nova Conta</h1>
 
-          <Label forLabel="email">
-            Nome
-            <input
-              {...register('name', { required: true })}
-              type="text"
-              name="name"
-              id="name"
-            />
-            <span>{errors.name?.message}</span>
-          </Label>
+          <Input
+            type="text"
+            name="name"
+            label="Nome"
+            error={errors.name?.message}
+            register={register}
+          />
 
-          <Label forLabel="email">
-            Email
-            <input
-              {...register('email', { required: true })}
-              type="email"
-              name="email"
-              id="email"
-            />
-            <span>{errors.email?.message}</span>
-          </Label>
+          <Input
+            type="email"
+            name="email"
+            label="Email"
+            error={errors.email?.message}
+            register={register}
+          />
 
-          <Label forLabel="password">
-            Senha
-            <input
-              {...register('password')}
-              type="password"
-              name="password"
-              id="password"
-            />
-            <span>{errors.password?.message}</span>
-          </Label>
+          <Input
+            type="password"
+            name="password"
+            label="Senha"
+            error={errors.password?.message}
+            register={register}
+          />
 
-          <Label forLabel="password">
-            Confirmação de Senha
-            <input
-              {...register('confirmPassword')}
-              type="password"
-              name="confirmPassword"
-              id="confirmPassword"
-            />
-            <span>{errors.confirmPassword?.message}</span>
-          </Label>
+          <Input
+            type="password"
+            name="confirmPassword"
+            label="Confirmação de Senha"
+            error={errors.confirmPassword?.message}
+            register={register}
+          />
 
           <Button text="Entrar" />
 
